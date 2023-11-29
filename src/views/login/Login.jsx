@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const navigate = useNavigate()
-    const BASE_URL = 'http://192.168.0.163:8000/api/auth/login/'
+    const BASE_URL = 'https://prounity.uz/jobs/api/auth/login/'
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 

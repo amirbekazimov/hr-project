@@ -29,7 +29,7 @@ import ApplyedUsersDelete from './views/applyed-users/ApllyedUsersDelete'
 function App() {
   const [role, setRole] = useState('');
   const location = useLocation()
-  const BASE_URL = 'http://192.168.0.163:8000'
+  const BASE_URL = 'https://prounity.uz/jobs'
 
 
   useEffect(() => {

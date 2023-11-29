@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { createHr } from '../../services/users'
@@ -8,6 +9,7 @@ const CreateHr = () => {
     const [username, setUsername] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const navigate = useNavigate()
 
 
     const handleCreateHr = async (e) => {
@@ -17,6 +19,7 @@ const CreateHr = () => {
             first_name: firstName,
             last_name: lastName,
         };
+        navigate('/hr')
         const response = await createHr(hr);
     };
 

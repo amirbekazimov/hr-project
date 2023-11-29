@@ -3,8 +3,10 @@ import { useParams } from 'react-router-dom'
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { applyVacancy } from '../../services'
+import { useNavigate } from 'react-router-dom'
 
 const ApplyVacancy = () => {
+    const navigate = useNavigate()
     const { id } = useParams();
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -20,13 +22,13 @@ const ApplyVacancy = () => {
             formData.append('uploaded_files', file[i]);
         }
         applyVacancy(formData);
-        console.log(formData);
+        navigate('/vacancies')
     }
 
     return (
         <div className="card w-50 p-4 mt-5 m-auto">
             <div className="card-head">
-                <h3>Create HR</h3>
+                <h3>Apply To This Vacancy</h3>
             </div>
             <div className="card-body">
                 <Form onSubmit={handleApplyVacancy}>
@@ -49,7 +51,7 @@ const ApplyVacancy = () => {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>LastName</Form.Label>
+                        <Form.Label>File</Form.Label>
                         <Form.Control
                             multiple
                             type="file"
@@ -58,7 +60,7 @@ const ApplyVacancy = () => {
                         />
                     </Form.Group>
                     <Button variant="primary" type="submit">
-                        Create
+                        Createee
                     </Button>
                 </Form>
             </div>

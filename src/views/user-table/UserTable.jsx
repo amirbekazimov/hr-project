@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import { getVacancies } from '../../services/index'
 
 const UserTable = () => {
-    const BASE_URL = 'http://192.168.0.163:8000/';
+    const BASE_URL = 'https://prounity.uz/jobs/';
     const [vacancies, setVacancies] = useState([]);
 
     useEffect(async () => {
