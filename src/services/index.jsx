@@ -7,7 +7,7 @@ const getHeader = (token) => {
 const BASE_URL = 'http://192.168.0.163:8000';
 
 export const getVacancies = async () => {
-    const BASE_URL = 'http://192.168.0.163:8000';
+
     const response = await fetch(BASE_URL + '/api/job/job-vacancies/', {
         method: 'GET'
     });
@@ -16,7 +16,6 @@ export const getVacancies = async () => {
 };
 
 export const postVacancy = async (vacancy) => {
-    const BASE_URL = 'http://192.168.0.163:8000';
     const response = await fetch(BASE_URL + '/api/job/job-vacancies/', {
         method: 'POST',
         headers: getHeader(),
