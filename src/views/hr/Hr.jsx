@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { getHr, deleteHr } from '../../services/users'
 
 
 const Hr = () => {
     const [hr, setHr] = useState([])
+    const location = useLocation()
 
     useEffect(() => {
         getHr().then((res) => {

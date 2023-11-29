@@ -25,6 +25,10 @@ import ApplyVacancy from './views/vacancies/ApplyVacancy'
 import ApplyedUsers from './views/applyed-users/ApplyedUsers'
 import ApplyedUserDetails from './views/applyed-users/ApplyedUserDetails'
 import ApplyedUsersDelete from './views/applyed-users/ApllyedUsersDelete'
+import Tags from './views/tags/Tags'
+import CreateTag from './views/tags/CreateTag'
+import TagDetails from './views/tags/TagDetails'
+import DeleteTag from './views/tags/DeleteTag'
 
 function App() {
   const [role, setRole] = useState('');
@@ -66,6 +70,10 @@ function App() {
                 <Route path='/applyed-users' element={<ApplyedUsers />} />
                 <Route path='/applyed-users-details/:id' element={<ApplyedUserDetails />} />
                 <Route path='/applyed-users-delete/:id' element={<ApplyedUsersDelete />} />
+                <Route path='/tags' element={<Tags />} />
+                <Route path='/tag-details/:id' element={<TagDetails />} />
+                <Route path='/delete-tag/:id' element={<DeleteTag />} />
+                <Route path='/create-tag' element={<CreateTag />} />
                 <Route path='/hr' element={<Hr />} />
                 <Route path='/update-hr/:id' element={<UpdateHr />} />
                 <Route path='/delete-hr/:id' element={<DeleteHr />} />
@@ -90,7 +98,7 @@ function App() {
       ) : (
         <div>
           <Routes>
-            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Login />} />
             <Route path='/vacancies' element={<Vacancies />} />
             <Route path='/apply-vacancy/:id' element={<ApplyVacancy />} />
           </Routes>

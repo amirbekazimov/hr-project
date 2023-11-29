@@ -65,6 +65,16 @@ const Sidebar = () => {
                             Apllyed Users
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link
+                            to={'/tags'}
+                            className={`nav-link text-secondary ${isItemActive("CreateTag") ? "active text-light rounded-5" : ""}`}
+                            onClick={() => handleItemClick("CreateTag")}
+                        >
+                            <svg className="bi me-2" width={16} height={16}><use xlinkHref="#home" /></svg>
+                            Tags
+                        </Link>
+                    </li>
                     <li>
                         <Link style={{ textDecoration: 'none' }} to={'/create-contract'}>
                             <a
@@ -177,7 +187,7 @@ const Sidebar = () => {
 
                         >
                             <svg className="bi me-2" width={16} height={16}><use xlinkHref="#grid" /></svg>
-                            <span class="text-white">
+                            <span className="text-white">
                                 Create Contract +
                             </span>
                         </a>

@@ -1,6 +1,6 @@
 .custom-button {
   width: 100%;
-  background-color: rgb(233, 241, 254) !important;
+  background-color: rgb(4, 14, 30) !important;
   border: none;
   text-align: center;
   text-decoration: none;
@@ -8,5 +8,9 @@
   font-size: 16px;
   cursor: pointer;
   text-align: start;
-  color: rgb(0, 128, 250) !important;
+  color: rgb(0, 250, 217) !important;
+}
+
+.nav-link {
+  border-radius: 50px !important;
 }
