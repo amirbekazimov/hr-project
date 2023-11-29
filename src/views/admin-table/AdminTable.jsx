@@ -8,19 +8,16 @@ const AdminTable = () => {
 
     useEffect(() => {
         getVacancies().then((res) => {
-            setVacancies(res)
+            console.log(res.data.results);
+            setVacancies(res.data.results)
         })
     }, [])
-
-    const createVacancy = () => {
-
-    }
 
 
     return <div className="w-100">
         <h1>Admin Table</h1>
         <Link to={'/create-vacancy'}>
-            <button onClick={createVacancy} className="btn btn-primary">Add vacancy</button>
+            <button className="btn btn-primary">Add vacancy</button>
         </Link>
 
         <Table className="w-100 mt-5 m-auto " striped bordered hover>

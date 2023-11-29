@@ -7,7 +7,7 @@ const getHeader = (token) => {
 const BASE_URL = 'https://prounity.uz/jobs';
 
 export const getVacancies = async () => {
-    const response = await fetch(BASE_URL + '/api/job/job-vacancies/', {
+    const response = await fetch(BASE_URL + '/api/job/jobs-vacancies', {
         method: 'GET'
     });
     const data = await response.json();
@@ -15,7 +15,7 @@ export const getVacancies = async () => {
 };
 
 export const postVacancy = async (vacancy) => {
-    const response = await fetch(BASE_URL + '/api/job/job-vacancies/', {
+    const response = await fetch(BASE_URL + '/api/job/jobs-vacancies', {
         method: 'POST',
         headers: getHeader(),
         body: JSON.stringify(vacancy)
